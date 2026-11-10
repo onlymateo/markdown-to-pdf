@@ -1,0 +1,41 @@
+/* Style par défaut de md2pdf (inspiré de GitHub, adapté à l'impression) */
+:root { --fg: #1f2328; --muted: #59636e; --border: #d1d9e0; --code-bg: #f6f8fa; --accent: #0969da; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { margin: 0; color: var(--fg); background: #fff;
+  font-family: -apple-system, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif,
+               "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 10.5pt; line-height: 1.55; }
+.markdown-body { max-width: 100%; word-wrap: break-word; }
+h1, h2, h3, h4, h5, h6 { font-weight: 600; line-height: 1.25; margin: 1.4em 0 .6em;
+  break-after: avoid; page-break-after: avoid; }
+h1 { font-size: 2em; padding-bottom: .3em; border-bottom: 1px solid var(--border); }
+h2 { font-size: 1.5em; padding-bottom: .3em; border-bottom: 1px solid var(--border); }
+h3 { font-size: 1.25em; } h4 { font-size: 1em; } h5 { font-size: .875em; }
+h6 { font-size: .85em; color: var(--muted); }
+.markdown-body > :first-child { margin-top: 0; }
+p, ul, ol, dl, table, blockquote, pre { margin: 0 0 1em; }
+p { orphans: 3; widows: 3; }
+a { color: var(--accent); text-decoration: none; }
+strong { font-weight: 600; }
+ul, ol { padding-left: 2em; } li + li { margin-top: .25em; }
+li.task-list-item { list-style: none; } li.task-list-item input { margin: 0 .4em 0 -1.4em; }
+blockquote { padding: 0 1em; color: var(--muted); border-left: .25em solid var(--border); }
+hr { height: 2px; border: 0; background: var(--border); margin: 1.5em 0; }
+img { max-width: 100%; height: auto; break-inside: avoid; }
+code, kbd, pre { font-variant-ligatures: none; font-family: ui-monospace, "Cascadia Code", Consolas, "SF Mono", Menlo, monospace; }
+code { font-size: 88%; padding: .15em .35em; background: rgba(129,139,152,.15); border-radius: 4px; }
+pre { font-size: 85%; line-height: 1.45; padding: 12px 14px; background: var(--code-bg);
+  border: 1px solid var(--border); border-radius: 6px; white-space: pre-wrap; word-break: break-word; }
+pre code { padding: 0; background: none; font-size: 100%; border-radius: 0; }
+kbd { font-size: 85%; padding: 2px 5px; border: 1px solid var(--border); border-bottom-width: 2px; border-radius: 4px; }
+table { border-collapse: collapse; display: table; width: auto; max-width: 100%; font-size: 95%; }
+thead { display: table-header-group; } tr { break-inside: avoid; }
+th, td { padding: 6px 12px; border: 1px solid var(--border); }
+th { font-weight: 600; background: var(--code-bg); }
+tbody tr:nth-child(2n) { background: #f9fafb; }
+dt { font-weight: 600; margin-top: .6em; } dd { margin: 0 0 .4em 1.5em; }
+.footnotes { font-size: 88%; color: var(--muted); } hr.footnotes-sep { margin-top: 2em; }
+.math { overflow-x: auto; } div.math { margin: 1em 0; text-align: center; }
+pre.mermaid { background: none; border: none; text-align: center; break-inside: avoid; }
+.toc { break-after: page; } .toc ul { list-style: none; padding-left: 0; }
+.toc .toc-l2 { padding-left: 1.2em; } .toc .toc-l3 { padding-left: 2.4em; font-size: 95%; }
